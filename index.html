@@ -4,7 +4,13 @@
     <title>Renan Tests</title>
   </head>
   <body>
-    <h1>Renan Tests</h1>
-    <a href="wordpress://publicize">Publicize</a>
+    <h1>Renan Tests</h1>    
+    <a id="link" href="wordpress://publicize">Publicize</a>
   </body>
+  <script>
+  let url = window.location.href.split("?");
+  if (url.length > 1) {
+    document.getElementById("link").href = "wordpress://publicize?" + urlSplit[1];
+  }
+  </script>
 </html>
