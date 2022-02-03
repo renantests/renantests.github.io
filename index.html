@@ -8,9 +8,19 @@
     <a id="link" href="wordpress://publicize">Publicize</a>
   </body>
   <script>
-  let url = window.location.href.split("?");
-  if (url.length > 1) {
-    document.getElementById("link").href = "wordpress://publicize?" + url[1];
-  }
+  const searchParams = window.location.search;
+  console.log(searchParams);
+
+  const url = window.location.href;
+  console.log(url);
+
+  const parsedUrl = new URL(url);
+  const params = parsedUrl.searchParams.toString();
+  console.log(params);
+  
+  // let url = window.location.href.split("?");
+  // if (url.length > 1) {
+    // document.getElementById("link").href = "wordpress://publicize?" + url[1];
+  // }
   </script>
 </html>
