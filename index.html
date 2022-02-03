@@ -10,7 +10,7 @@
   <script>
   let url = window.location.href.split("?");
   if (url.length > 1) {
-    document.getElementById("link").href = "wordpress://publicize?" + urlSplit[1];
+    document.getElementById("link").href = "wordpress://publicize?" + url[1];
   }
   </script>
 </html>
